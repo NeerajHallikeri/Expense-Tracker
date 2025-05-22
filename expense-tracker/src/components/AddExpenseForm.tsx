@@ -8,23 +8,20 @@ function AddExpenseForm({ budgets }: any) {
   const formRef = useRef<HTMLFormElement>(null);
   const focusRef = useRef<HTMLInputElement>(null);
 
-  useEffect(()=>{
-    if(!isSubmitting){
-        formRef.current?.reset()
-        focusRef.current?.focus()
-
+  useEffect(() => {
+    if (!isSubmitting) {
+      formRef.current?.reset();
+      focusRef.current?.focus();
+      console.log("it is executing");
     }
-  },[isSubmitting])
+  }, [isSubmitting]);
 
   return (
     <div className="form-wrapper">
       <h2 className="h3">
         Add New{" "}
         <span className="accent">
-          {budgets.length === 1 &&
-            `${budgets.map((budg: any) => {
-              budg.name;
-            })}`}
+          {budgets.length === 1 && `${budgets.map((budg: any) => budg.name)}`}
         </span>{" "}
         Expense
       </h2>

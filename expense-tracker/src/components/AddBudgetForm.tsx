@@ -44,7 +44,7 @@ function AddBudgetForm() {
             inputMode="decimal"
           />
         </div>
-        <input type="hidden" name="_action" value="createBudget" />
+        <input type="hidden" name="_action" value="createBudget" readOnly />
         <button type="submit" className="btn btn--dark" disabled={isSubmitting}>
           {isSubmitting ? (
             <span>Submitting...</span>
